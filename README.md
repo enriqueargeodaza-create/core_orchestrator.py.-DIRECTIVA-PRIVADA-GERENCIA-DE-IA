@@ -272,6 +272,9 @@ class HighCommandAuth:
 
     def activar_maestro(self, id):
         print(f"Usuario {id} elevado a Maestro del Lenguaje en el Muro Global.")
-        
+        # Comando de Creación y Aseguramiento
+mkdir -p ALTO_MANDO_GERENCIA_IA/MODERACION_MAESTRA
+touch ALTO_MANDO_GERENCIA_IA/MODERACION_MAESTRA/checkpoint_alfa.py
+
 
     
