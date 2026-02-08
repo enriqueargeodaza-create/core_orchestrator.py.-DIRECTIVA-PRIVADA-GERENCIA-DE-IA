@@ -969,4 +969,12 @@ if __name__ == "__main__":
   "NODES": ["GITHUB_CORE", "TELEGRAM_MRQTV", "MISTERQ_BOT"],
   "PROTOCOL": "SILENT_SHADOW_2026",
   "ACCESS_ORIGIN": "AUTHORIZED_ONLY"
-}
+} /mi-red-social-bot
+├── bot.py                # El corazón (maneja los comandos)
+├── modules/
+│   ├── downloader.py     # Lógica de yt-dlp para videos
+│   ├── translator.py     # Traducción de texto y voz (Whisper)
+│   └── generator.py      # Conexión con la IA de imágenes
+├── requirements.txt      # Librerías necesarias
+└── .env                  # Tus llaves secretas (API Keys)
+
