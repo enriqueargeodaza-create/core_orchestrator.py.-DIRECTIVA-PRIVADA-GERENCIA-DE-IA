@@ -740,3 +740,84 @@ function animateNumber(id, valor) {
         font-size: 0.7rem;
     }
 </style>
+<div class="feed-container">
+    
+    <div class="post-box">
+        <textarea placeholder="¿Qué hay de nuevo en el Mundo Mister?"></textarea>
+        <div class="post-actions">
+            <button class="btn-img">🖼️ Imagen</button>
+            <button class="btn-post">PUBLICAR EN EL UNIVERSO</button>
+        </div>
+    </div>
+
+    <div class="news-flow">
+        <div class="card-post official">
+            <div class="post-header">
+                <span class="user-badge">⭐ GERENCIA GENERAL</span>
+                <span class="post-time">Ahora mismo</span>
+            </div>
+            <p class="post-content">
+                ¡El Blindaje Universal ha sido completado con éxito! Bienvenidos al imperio. 🚀🇻🇪
+            </p>
+            <div class="post-footer">
+                <span>❤️ Billones de likes</span>
+                <span>💬 Comentarios protegidos</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .feed-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .post-box {
+        background: #111;
+        padding: 15px;
+        border: 1px solid #ffff00;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: white;
+        font-family: sans-serif;
+        resize: none;
+        outline: none;
+    }
+
+    .btn-post {
+        background: #00ff00;
+        color: black;
+        border: none;
+        padding: 8px 15px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card-post {
+        background: #0a0a0a;
+        border: 1px solid #333;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .card-post.official {
+        border-left: 5px solid #ffff00; /* Distinción de la Gerencia */
+    }
+
+    .user-badge {
+        color: #ffff00;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+</style>
