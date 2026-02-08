@@ -43,5 +43,17 @@ class MundoDeLaGenteMRQ:
 
 if __name__ == "__main__":
     gerencia = MundoDeLaGenteMRQ()
-    gerencia.ejecutar_junta_directiva()
+    gerencia.ejecutar_junta_directiva() def publicar_contenido_total(usuario_id, contenido_original, canal_id):
+    # 1. Pulir el contenido con la IA
+    post_final = chatgpt.refinar_texto(contenido_original)
+    
+    # 2. Publicar en el Muro (Base de Datos)
+    db.guardar_en_muro(usuario_id, post_final)
+    
+    # 3. Enviar al Chat del Canal de forma automática
+    resumen_canal = f"📢 ¡Nuevo post de @{usuario_id}!: {post_final[:100]}..."
+    chat_engine.enviar_mensaje_a_canal(canal_id, resumen_canal)
+    
+    return "Publicado con éxito en Muro y Canales"
+    
     
