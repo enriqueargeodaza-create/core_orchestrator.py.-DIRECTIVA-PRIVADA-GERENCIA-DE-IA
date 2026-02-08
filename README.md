@@ -184,7 +184,40 @@ class CulturalDictionaryMRQ:
 def procesar_con_educacion(texto):
     educador = CulturalDictionaryMRQ()
     texto_limpio = educador.educar_y_corregir(texto)
-    return texto_limpio
+    return texto_limpio # --- DICCIONARIO UNIVERSAL DE RE-SEMANTIZACIÓN ---
+# Autorizado por: SIGMA-ALPHA-OMNIMODEL
+
+class UniversalEtimologyMRQ:
+    def __init__(self):
+        self.paises = {
+            "VE": { # Venezuela
+                "palabrota_fuerte": {
+                    "etimologia": "Deriva del latín/historia X...",
+                    "significado_popular": "Insulto cotidiano",
+                    "valor_educativo": "Término original para referirse a la fortaleza o error.",
+                    "reemplazo_noble": "Ciudadano / Hermano"
+                }
+            },
+            "ES": { # España
+                "palabrota_fuerte": {
+                    "etimologia": "Origen en el siglo XVII...",
+                    "significado_popular": "Expresión de asombro o ira",
+                    "valor_educativo": "Originalmente significaba plenitud.",
+                    "reemplazo_noble": "Cáspita / Asombroso"
+                }
+            }
+            # Se expande a los 195 países del mundo
+        }
+
+    def educar_usuario(self, palabra, codigo_pais):
+        pais_dict = self.paises.get(codigo_pais, {})
+        if palabra in pais_dict:
+            info = pais_dict[palabra]
+            return (f"Educación MRQ: Usaste '{palabra}'. "
+                    f"Su etimología real es {info['etimologia']}. "
+                    f"No la uses para ofender; cámbiala por '{info['reemplazo_noble']}'.")
+        return None
+        
     
 
     
