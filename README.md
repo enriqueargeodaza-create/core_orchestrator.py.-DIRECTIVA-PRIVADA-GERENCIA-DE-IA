@@ -652,3 +652,91 @@ function animateNumber(id, valor) {
       [ ████████████████ ]
             SCAN ME
             
+<div class="login-portal">
+    <div class="glow-overlay"></div>
+    <div class="login-box">
+        <div class="logo-container">
+            <div class="universal-logo">🌍</div>
+            <h1>MUNDO DE LA GENTE MISTER</h1>
+            <p class="subtitle">SISTEMA BLINDADO - ACCESO UNIVERSAL</p>
+        </div>
+
+        <form class="mister-form">
+            <div class="input-group">
+                <input type="text" placeholder="USUARIO MISTER" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="CLAVE ENCRIPTADA" required>
+            </div>
+            
+            <button type="submit" class="btn-access">INICIAR CONEXIÓN</button>
+            
+            <div class="security-tag">
+                <span class="shield-icon">🛡️</span> PROTECCIÓN NIVEL: GERENCIA GENERAL
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    body { margin: 0; background: #000; overflow: hidden; }
+    
+    .login-portal {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle, #001a00 0%, #000 100%);
+        font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    }
+
+    .login-box {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 40px;
+        border: 2px solid #ffff00;
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(0, 255, 0, 0.2);
+        text-align: center;
+        width: 350px;
+        position: relative;
+        z-index: 10;
+    }
+
+    h1 { color: #fff; font-size: 1.5rem; letter-spacing: 3px; margin: 10px 0; }
+    .subtitle { color: #00ff00; font-size: 0.7rem; margin-bottom: 30px; }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        background: #111;
+        border: 1px solid #333;
+        color: #00ff00;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .btn-access {
+        width: 100%;
+        padding: 15px;
+        background: #ffff00;
+        color: #000;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+        text-transform: uppercase;
+    }
+
+    .btn-access:hover {
+        background: #00ff00;
+        box-shadow: 0 0 20px #00ff00;
+    }
+
+    .security-tag {
+        margin-top: 25px;
+        color: #555;
+        font-size: 0.7rem;
+    }
+</style>
