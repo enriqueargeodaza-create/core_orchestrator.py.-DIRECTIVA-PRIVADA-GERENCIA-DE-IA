@@ -645,3 +645,10 @@ function animateNumber(id, valor) {
       [ ████████████████ ]
             SCAN ME
             
+      [ ████████████████ ]
+      [ ██  MUNDO DE  ██ ]
+      [ ██  LA GENTE  ██ ]
+      [ ██  MISTER    ██ ]
+      [ ████████████████ ]
+            SCAN ME
+            
