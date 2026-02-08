@@ -549,4 +549,54 @@ app.get('/admin/stats', async (req, res) => {
         font-size: 2rem;
     }
 </style>
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+
+<script>
+  // Tu configuración de Firebase (La copias de tu consola de Firebase)
+  const firebaseConfig = {
+    apiKey: "TU_API_KEY",
+    authDomain: "tu-proyecto.firebaseapp.com",
+    databaseURL: "https://tu-proyecto.firebaseio.com",
+    projectId: "tu-proyecto",
+    storageBucket: "tu-proyecto.appspot.com",
+    messagingSenderId: "tu-id",
+    appId: "tu-app-id"
+  };
+
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+
+  // Función para contar usuarios en tiempo real
+  const userCountElement = document.getElementById('user-count');
+
+  database.ref('usuarios').on('value', (snapshot) => {
+    const total = snapshot.numChildren(); 
+    userCountElement.innerText = total.toLocaleString(); // Pone el número bonito con comas
+  });
+</script>
+// SISTEMA DE CONTEO MASIVO - MUNDO DE LA GENTE MISTER
+// Configuración de Alta Disponibilidad
+const database = firebase.database();
+const userCountRef = database.ref('stats/global_user_count'); // Referencia a un contador único para mayor velocidad
+
+// Función de Actualización Instantánea
+userCountRef.on('value', (snapshot) => {
+    const total = snapshot.val() || 0;
+    // Efecto de conteo animado para dar prestigio
+    animateNumber('user-count', total);
+}, (error) => {
+    console.error("Error de Gerencia: Verificando permisos de seguridad...", error);
+});
+
+function animateNumber(id, valor) {
+    document.getElementById(id).innerText = valor.toLocaleString('es-VE');
+}
 
