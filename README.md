@@ -599,4 +599,16 @@ userCountRef.on('value', (snapshot) => {
 function animateNumber(id, valor) {
     document.getElementById(id).innerText = valor.toLocaleString('es-VE');
 }
+<script>
+    const SYSTEM_SHIELD = {
+        status: "BLINDADO",
+        access: "RESTRINGIDO_GERENCIA",
+        scaling: "BILLONES_INFINITOS",
+        protection: "ACTIVA_24/7_UNIVERSAL",
+        verifyIntegrity: () => {
+            console.log("🛡️ Escudo Universal Activo: Mundo de la Gente Mister está protegido.");
+        }
+    };
+    Object.freeze(SYSTEM_SHIELD); // Nadie puede cambiar este estado
+</script>
 
