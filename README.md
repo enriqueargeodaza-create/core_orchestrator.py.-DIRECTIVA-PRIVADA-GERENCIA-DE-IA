@@ -611,4 +611,30 @@ function animateNumber(id, valor) {
     };
     Object.freeze(SYSTEM_SHIELD); // Nadie puede cambiar este estado
 </script>
+<div id="vip-badge" class="badge-gold">
+    <span class="sparkle"></span>
+    MISTER FOUNDER VIP
+</div>
+
+<style>
+    .badge-gold {
+        background: linear-gradient(45deg, #ffd700, #ffae00, #fff7cc);
+        color: #000;
+        font-weight: bold;
+        padding: 8px 15px;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        display: inline-block;
+        animation: pulse-gold 2s infinite;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    @keyframes pulse-gold {
+        0% { transform: scale(1); box-shadow: 0 0 10px #ffd700; }
+        50% { transform: scale(1.05); box-shadow: 0 0 30px #ffd700; }
+        100% { transform: scale(1); box-shadow: 0 0 10px #ffd700; }
+    }
+</style>
 
