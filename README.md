@@ -1105,3 +1105,37 @@ async def image_command(update, context):
     else:
         await update.message.reply_text("❌ Error al generar la imagen.")
         
+# Configuración del Bot de Telegram
+TELEGRAM_BOT_TOKEN=tu_token_de_bot_father
+
+# Inteligencia Artificial (OpenAI)
+OPENAI_API_KEY=tu_llave_de_openai
+
+# Configuración del Sistema
+DOWNLOAD_PATH=./downloads
+MAX_VIDEO_SIZE=50MB
+# 🚀 Super-Bot Multired Social (MRQTV Edition)
+
+Bienvenido al motor de automatización de nuestra red social. Este bot está diseñado para ser la herramienta definitiva de gestión multimedia y traducción en tiempo real.
+
+## 🌟 Funcionalidades Principales
+* **📥 Descarga Universal:** Soporta YouTube, X (Twitter), Instagram, Rumble y más gracias a `yt-dlp`.
+* **🎙️ Traducción de Voz:** Transcripción y traducción instantánea de notas de voz usando **OpenAI Whisper**.
+* **🎨 Generación de Arte:** Creación de imágenes mediante IA con el comando `/crear`.
+* **🌍 Traductor Automático:** Detección de idiomas en chats grupales.
+
+## 🛠️ Instalación Rápida
+1. Clona el repositorio: `git clone https://github.com/tu-usuario/tu-red-social.git`
+2. Instala dependencias: `pip install -r requirements.txt`
+3. Configura tu `.env` con los tokens necesarios.
+4. Ejecuta: `python bot.py`
+
+## 📊 Estado de la Prueba Pública
+- [ ] Módulo Descargas: **Activo**
+- [ ] Módulo Traducción: **Activo**
+- [ ] Módulo Imágenes: **Activo**
+- [ ] python-telegram-bot
+yt-dlp
+openai
+python-dotenv
+ffmpeg-python
