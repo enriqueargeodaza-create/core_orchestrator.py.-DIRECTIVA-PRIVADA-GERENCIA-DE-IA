@@ -962,3 +962,4 @@ class MundoDeLaGenteMRQ:
 if __name__ == "__main__":
     mrq = MundoDeLaGenteMRQ()
     mrq.activar_gerente_general()
+@Misterq_bot
