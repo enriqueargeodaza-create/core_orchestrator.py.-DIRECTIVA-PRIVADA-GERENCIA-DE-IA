@@ -963,3 +963,10 @@ if __name__ == "__main__":
     mrq = MundoDeLaGenteMRQ()
     mrq.activar_gerente_general()
 @Misterq_bot
+{
+  "SYSTEM_ADMIN": "GERENCIA_GENERAL",
+  "SECURITY_LEVEL": "MILITAR_CLASSIFIED",
+  "NODES": ["GITHUB_CORE", "TELEGRAM_MRQTV", "MISTERQ_BOT"],
+  "PROTOCOL": "SILENT_SHADOW_2026",
+  "ACCESS_ORIGIN": "AUTHORIZED_ONLY"
+}
