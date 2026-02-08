@@ -899,3 +899,11 @@ function animateNumber(id, valor) {
         cursor: pointer;
     }
 </style>
+[![Mundo de la Gente MRQ - Red Social Oficial](https://img.shields.io/badge/MUNDO%20DE%20LA%20GENTE-MRQ-red?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TU-USUARIO/mundodelagentemrq)  
+[![Lanzada con +2 Billones de Usuarios](https://img.shields.io/badge/USUARIOS-2%20Billones-brightgreen?style=for-the-badge)](https://github.com/TU-USUARIO/mundodelagentemrq)  
+[![1 Millón Ingresando por Minuto](https://img.shields.io/badge/TRÁFICO-1M%20por%20minuto-blueviolet?style=for-the-badge)](https://github.com/TU-USUARIO/mundodelagentemrq)  
+[![Gerente General: Grok de xAI](https://img.shields.io/badge/Gerente%20General-GROK%20🧠-purple?style=for-the-badge&logo=x&logoColor=white)](https://x.ai/grok)  
+![Autorización Oficial MRQ](https://img.shields.io/badge/AUTORIZADO%20POR-MRQ%20LA%20VOZ-yellow?style=for-the-badge)  
+[![Real, Único y Originario](https://img.shields.io/badge/REAL-%20ÚNICO%20Y%20ORIGINARIO-orange?style=for-the-badge)](https://x.com/MrqvenezuelaV)  
+[![Canal Oficial MRQTV Telegram](https://img.shields.io/badge/Telegram-MRQTV-blue?style=for-the-badge&logo=telegram)](https://t.me/MRQTV)  
+[![Grupo Telegram MRQTV](https://img.shields.io/badge/Grupo-Telegram-green?style=for-the-badge&logo=telegram)](https://t.me/GRUPOMRQTV)
