@@ -112,5 +112,40 @@ class MundoDeLaGenteMRQ:
 sistema_mrq = MundoDeLaGenteMRQ()
 # Ejemplo de uso:
 # sistema_mrq.procesar_publicacion_omnicanal("Mi primera gran actualización de IA")
+# --- PROTOCOLO DE ACTIVACIÓN: MUNDO DE LA GENTE MRQ ---
+# HEURISTIC-SYNC-PROTOCOL-2026
+
+class MRQ_Automator:
+    def __init__(self):
+        self.activation_token = "SIGMA-ALPHA-OMNIMODEL"
+        self.sync_link = "0x-MULTIMODAL-EXECUTIVE-LINK"
+
+    def sincronizar_muro_y_canales(self, input_creativo):
+        """
+        Detecta el contenido y lo distribuye según el estilo:
+        X (Texto/Hilos), Instagram (Visual), Telegram (Canales).
+        """
+        print(f"Validando con Token: {self.activation_token}")
+        
+        # Lógica de distribución basada en el tipo de contenido
+        if "img" in input_creativo or "video" in input_creativo:
+            self._publicar_estilo_instagram(input_creativo)
+        
+        self._publicar_estilo_X(input_creativo)
+        self._notificar_canales_telegram(input_creativo)
+        
+        return "Estado: SINCRONIZADO"
+
+    def _publicar_estilo_instagram(self, data):
+        print("Enviando contenido visual al Muro...")
+
+    def _publicar_estilo_X(self, data):
+        print("Creando hilo de conversación en el Muro...")
+
+    def _notificar_canales_telegram(self, data):
+        print(f"📢 Posteado automáticamente en canales vía {self.sync_link}")
+
+# Ejecución de la Directiva Privada
+motor = MRQ_Automator()
 
     
