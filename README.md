@@ -821,3 +821,81 @@ function animateNumber(id, valor) {
         font-size: 0.8rem;
     }
 </style>
+<div class="mister-chat">
+    <div class="chat-header">
+        <span class="status-dot"></span> 🔵 CANAL UNIVERSAL (EN VIVO)
+    </div>
+    
+    <div class="chat-window" id="chat-box">
+        <div class="msg system">🛡️ Sistema: Blindaje Universal Activo. Conexión Segura.</div>
+        <div class="msg official">
+            <strong>GERENCIA GENERAL:</strong> ¡Bienvenidos todos al canal oficial!
+        </div>
+    </div>
+
+    <div class="chat-input-area">
+        <input type="text" placeholder="Escribe un mensaje al universo..." id="msg-input">
+        <button onclick="enviarMensaje()">⚡</button>
+    </div>
+</div>
+
+<style>
+    .mister-chat {
+        width: 300px;
+        height: 400px;
+        background: #050505;
+        border: 2px solid #00ff00;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    }
+
+    .chat-header {
+        padding: 10px;
+        background: #00ff00;
+        color: #000;
+        font-weight: bold;
+        font-size: 0.8rem;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .chat-window {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+    }
+
+    .msg { margin-bottom: 8px; }
+    .msg.official { color: #ffff00; border-left: 2px solid #ffff00; padding-left: 5px; }
+    .msg.system { color: #888; font-style: italic; font-size: 0.75rem; }
+
+    .chat-input-area {
+        display: flex;
+        padding: 10px;
+        background: #111;
+    }
+
+    #msg-input {
+        flex: 1;
+        background: #000;
+        border: 1px solid #333;
+        color: #fff;
+        padding: 5px;
+        outline: none;
+    }
+
+    .chat-input-area button {
+        background: #ffff00;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+</style>
