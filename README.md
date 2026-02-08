@@ -458,4 +458,95 @@ class MonitorRespuestaGlobal:
     async def difundir_en_plano_universal(self, data):
         # Esta es la activación inmediata del Portal de Bienvenida
         pass 
-        
+        // Ejemplo en Node.js con Express
+app.get('/admin/stats', async (req, res) => {
+    try {
+        const totalUsers = await User.countDocuments(); // Si usas MongoDB
+        res.json({
+            proyecto: "Mundo de la Gente Mister",
+            usuarios_registrados: totalUsers,
+            estado: "Activo"
+        });
+    } catch (error) {
+        res.status(500).send("Error al obtener estadísticas");
+    }
+});
+<div class="stats-container">
+    <h2 class="stats-title">ESTADÍSTICAS MUNDO DE LA GENTE MISTER</h2>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="icon">👥</div>
+            <div class="stat-value" id="user-count">1,240</div>
+            <div class="stat-label">Misters Registrados</div>
+        </div>
+
+        <div class="stat-card active">
+            <div class="icon">🌍</div>
+            <div class="stat-value">Venezuela</div>
+            <div class="stat-label">Región más Activa</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🚀</div>
+            <div class="stat-value">Online</div>
+            <div class="stat-label">Estado del Servidor</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .stats-container {
+        background: #000; /* Fondo negro como el espacio */
+        color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        border: 2px solid #ffff00; /* Borde amarillo */
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .stats-title {
+        color: #00ff00; /* Verde tecnológico */
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .stats-grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        transition: transform 0.3s;
+        border-bottom: 4px solid #ffff00;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-10px);
+        background: rgba(0, 255, 0, 0.1);
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+</style>
+
