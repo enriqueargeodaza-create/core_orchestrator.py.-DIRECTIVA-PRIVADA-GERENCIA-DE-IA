@@ -978,3 +978,4 @@ if __name__ == "__main__":
 ├── requirements.txt      # Librerías necesarias
 └── .env                  # Tus llaves secretas (API Keys)
 
+pip install yt-dlp python-telegram-bot python-dotenv
