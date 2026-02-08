@@ -1045,3 +1045,63 @@ def main():
 if __name__ == '__main__':
     main()
     
+pip install openai
+import openai
+import os
+
+# Configura tu llave de OpenAI
+openai.api_key = "TU_LLAVE_OPENAI"
+
+async def transcribe_and_translate(file_path):
+    try:
+        with open(file_path, "rb") as audio_file:
+            # Whisper detecta el idioma original y lo traduce al inglés o lo transcribe al español
+            transcript = openai.Audio.translate("whisper-1", audio_file)
+            return transcript["text"]
+    except Exception as e:
+        print(f"Error en Whisper: {e}")
+        return "❌ No pude procesar el audio."
+        async def generate_image(prompt):
+    try:
+        response = openai.Image.generate(
+            model="dall-e-3",
+            prompt=prompt,
+            size="1024x1024",
+            quality="standard",
+            n=1,
+        )
+        return response.data[0].url
+    except Exception as e:
+        print(f"Error creando imagen: {e}")
+        return None
+        # ... (importaciones anteriores)
+import voice_processor
+
+async def handle_voice(update, context):
+    # 1. Descargar el archivo de voz de Telegram
+    new_file = await context.bot.get_file(update.message.voice.file_id)
+    file_path = "voice_note.ogg"
+    await new_file.download_to_drive(file_path)
+    
+    # 2. Procesar con Whisper
+    translation = await voice_processor.transcribe_and_translate(file_path)
+    
+    # 3. Responder al grupo
+    await update.message.reply_text(f"📝 **Traducción de audio:**\n\n{translation}", parse_mode='Markdown')
+    
+    # Limpieza
+    os.remove(file_path)
+
+async def image_command(update, context):
+    prompt = " ".join(context.args)
+    if not prompt:
+        await update.message.reply_text("Uso: /crear [descripción de la imagen]")
+        return
+        
+    await update.message.reply_text("🎨 Generando tu imagen, espera un momento...")
+    img_url = await generate_image(prompt)
+    if img_url:
+        await update.message.reply_photo(photo=img_url)
+    else:
+        await update.message.reply_text("❌ Error al generar la imagen.")
+        
