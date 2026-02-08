@@ -979,3 +979,69 @@ if __name__ == "__main__":
 └── .env                  # Tus llaves secretas (API Keys)
 
 pip install yt-dlp python-telegram-bot python-dotenv
+import yt_dlp
+import os
+
+def download_video(url):
+    # Configuración para descargar el video y audio combinados
+    ydl_opts = {
+        'format': 'best',
+        'outtmpl': 'downloads/%(title)s.%(ext)s',
+        'quiet': True,
+        'noplaylist': True,
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=True)
+            filename = ydl.prepare_filename(info)
+            return filename
+    except Exception as e:
+        print(f"Error al descargar: {e}")
+        return None
+
+# Función para limpiar archivos después de enviarlos
+def cleanup(filepath):
+    if os.path.exists(filepath):
+        os.remove(filepath)
+        from telegram.ext import Application, MessageHandler, filters
+import downloader
+import os
+
+# Tu Token de BotFather aquí
+TOKEN = "TU_TOKEN_DE_TELEGRAM"
+
+async def handle_message(update, context):
+    text = update.message.text
+    
+    # 1. LÓGICA DE DESCARGAS (YouTube, X, Rumble, etc.)
+    if "http" in text:
+        await update.message.reply_text("🚀 Detecté un link, procesando descarga...")
+        video_path = downloader.download_video(text)
+        if video_path:
+            await update.message.reply_video(video=open(video_path, 'rb'))
+            downloader.cleanup(video_path)
+        else:
+            await update.message.reply_text("❌ No pude descargar de ese sitio.")
+
+    # 2. LÓGICA DE TRADUCCIÓN (Para mensajes de texto)
+    # Aquí integraríamos la API de traducción
+    if len(text) > 1 and not text.startswith("http"):
+        # Ejemplo rápido de respuesta:
+        print(f"Traduciendo: {text}")
+
+async def handle_voice(update, context):
+    # 3. LÓGICA DE AUDIO (Whisper)
+    await update.message.reply_text("🎙️ Escuchando audio y traduciendo...")
+    # Aquí se descarga el .ogg y se pasa por Whisper
+
+def main():
+    app = Application.builder().token(TOKEN).build()
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.VOICE, handle_voice))
+    print("Bot corriendo para MRQTV...")
+    app.run_polling()
+
+if __name__ == '__main__':
+    main()
+    
