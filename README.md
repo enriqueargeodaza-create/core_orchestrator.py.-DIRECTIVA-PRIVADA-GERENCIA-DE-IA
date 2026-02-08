@@ -55,5 +55,13 @@ if __name__ == "__main__":
     chat_engine.enviar_mensaje_a_canal(canal_id, resumen_canal)
     
     return "Publicado con éxito en Muro y Canales"
-    
+    /src
+ ├── core_orchestrator.py  <-- (Donde ya tienes las APIs)
+ ├── models/
+ │    └── post_model.py     <-- Esquema: ID, Tipo (Post/Hilo/Imagen), Metadata
+ ├── services/
+ │    └── publisher.py      <-- Lógica para enviar a Muro + Canales simultáneamente
+ └── ui/
+      └── feed_component.js <-- El renderizado estilo X/Insta
+      
     
