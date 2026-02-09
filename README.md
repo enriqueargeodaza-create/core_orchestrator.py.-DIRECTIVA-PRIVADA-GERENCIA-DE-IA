@@ -1190,3 +1190,18 @@ def protocol_vulnerability_scan(user_activity):
         log_hacker_data(user_activity.ip, user_activity.fingerprint)
         return "ACCESO DENEGADO - PROTOCOLO MILITAR ACTIVADO"
         
+/
+├── .protocols/                # Protocolos de identidad y seguridad civil
+├── /core-consciousness/       # Scripts de procesamiento de niveles de conciencia
+│   ├── cristic-alignment.py   # Algoritmos de frecuencia y coherencia
+│   └── neural-sync.js         # Lógica de sincronización científica
+├── /content-integration/      # Módulos para el flujo de Telegram MRQTV
+│   ├── telegram-bridge.sh     # Script de conexión con la API de Telegram
+│   └── data-parser.py         # Filtro de contenido científico y espiritual
+├── /research-docs/            # Documentación científica y espiritual
+│   ├── bio-geometry.md        # Estudios sobre tecnología biológica
+│   └── universal-laws.pdf     # Archivo de leyes universales de conciencia
+├── /ui-identity/              # Interfaz gráfica basada en la identidad MRQTV
+│   ├── assets/                # Logos, paleta de colores y símbolos
+│   └── components/            # Elementos visuales de la red social
+└── README.md                  # Manifiesto del proyecto y guía técnica
