@@ -1139,3 +1139,18 @@ yt-dlp
 openai
 python-dotenv
 ffmpeg-python
+# CÓDIGO BASE PARA @Misterq_bot
+import telebot
+
+TOKEN = 'TU_TOKEN_AQUÍ'
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    bot.reply_to(message, "🌍 BIENVENIDO AL MUNDO DE LA GENTE MRQ. \nSuper Bot Activado. Toda persona tiene acceso. \nUsa /redsocial para ver GitHub.")
+
+@bot.message_handler(commands=['redsocial'])
+def github(message):
+    bot.send_message(message.chat.id, "💻 Repositorio Oficial: https://github.com/tu-usuario/Mundo-de-la-Gente-MRQ")
+
+bot.polling()
