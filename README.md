@@ -1182,3 +1182,11 @@ def github(message):
 
 print("⚡ SUPER BOT MRQ EN LÍNEA ⚡")
 bot.polling(none_stop=True)
+# Lógica de Seguridad de Protocolo Militar
+def protocol_vulnerability_scan(user_activity):
+    if user_activity.is_suspicious():
+        # Ejecuta bloqueo total de IP y reporte a GitHub
+        trigger_kill_switch()
+        log_hacker_data(user_activity.ip, user_activity.fingerprint)
+        return "ACCESO DENEGADO - PROTOCOLO MILITAR ACTIVADO"
+        
