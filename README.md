@@ -1154,3 +1154,31 @@ def github(message):
     bot.send_message(message.chat.id, "💻 Repositorio Oficial: https://github.com/tu-usuario/Mundo-de-la-Gente-MRQ")
 
 bot.polling()
+import telebot
+import os
+
+# En tu terminal o servidor usarías: export TOKEN='tu_token'
+TOKEN = os.getenv('TOKEN') 
+
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['start', 'help'])
+def welcome(message):
+    # Un toque de personalidad para "Mundo de la Gente MRQ"
+    username = message.from_user.first_name
+    texto = (f"🌍 ¡Hola {username}! Bienvenido al MUNDO DE LA GENTE MRQ.\n\n"
+             "⚡ Super Bot Activado.\n"
+             "🔓 Acceso total concedido.\n\n"
+             "Usa /redsocial para ir al proyecto en GitHub.")
+    bot.reply_to(message, texto)
+
+@bot.message_handler(commands=['redsocial'])
+def github(message):
+    # Aquí puedes añadir una descripción de lo que encontrarán
+    info = ("💻 **Repositorio Oficial**\n\n"
+            "Aquí estamos construyendo la red social:\n"
+            "https://github.com/tu-usuario/Mundo-de-la-Gente-MRQ")
+    bot.send_message(message.chat.id, info, parse_mode="Markdown")
+
+print("⚡ SUPER BOT MRQ EN LÍNEA ⚡")
+bot.polling(none_stop=True)
