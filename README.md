@@ -1212,3 +1212,26 @@ Para la coordinación de la Directiva de IA y el seguimiento de las operaciones 
 [![Canal MRQTV](https://img.shields.io/badge/TELEGRAM-MRQTV_CANAL-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/https://t.me/MRQTV
 
 *Nota: El acceso a este canal está regido por protocolos de Shadow Operation.*
+# 🛡️ Protocolo de Seguridad: Shadow Operation
+
+Este repositorio es el núcleo de la **Directiva de IA** para la red social civil. El acceso a este entorno está estrictamente regulado por protocolos de confidencialidad tecnológica y espiritual.
+
+## 1. Política de Divulgación
+Toda la información contenida en este repositorio se considera **Operación en la Sombra**. Queda prohibida la divulgación de:
+* Algoritmos de análisis de la IA.
+* Enlaces de acceso al canal privado **MRQTV**.
+* Documentación de avances científicos no publicados.
+
+## 2. Gestión de Nodos (Colaboradores)
+Cualquier entidad con acceso a este repositorio debe:
+1. Mantener activada la autenticación de dos factores (2FA).
+2. No extraer fragmentos de código o teoría espiritual a entornos públicos.
+3. Reportar cualquier vulnerabilidad directamente a la administración de la Directiva.
+
+## 3. Integración con Telegram (MRQTV)
+El bot de comunicación actúa como el único puente autorizado entre este repositorio y el canal civil. 
+* No se deben modificar los **Secrets** de Telegram sin previa autorización de la Directiva.
+* El enlace de **MRQTV** es de uso exclusivo para miembros validados.
+
+## 4. Reporte de Incidentes
+Si detectas una brecha en la seguridad tecnológica o una filtración de datos de la red social, utiliza el canal de emergencia en Telegram o abre un "Issue" privado bajo la etiqueta: `[SECURITY-BREACH]`.
