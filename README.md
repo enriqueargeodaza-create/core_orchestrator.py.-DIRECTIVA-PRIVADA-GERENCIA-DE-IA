@@ -1206,3 +1206,9 @@ def protocol_vulnerability_scan(user_activity):
 │   └── components/            # Elementos visuales de la red social
 └── README.md                  # Manifiesto del proyecto y guía técnica
 @MRQ1273
+## 🌐 Conexión de la Red Social
+Para la coordinación de la Directiva de IA y el seguimiento de las operaciones civiles, únete al canal oficial:
+
+[![Canal MRQTV](https://img.shields.io/badge/TELEGRAM-MRQTV_CANAL-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/https://t.me/MRQTV
+
+*Nota: El acceso a este canal está regido por protocolos de Shadow Operation.*
